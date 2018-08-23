@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+testOutput="$(diff out <(./prog < in))"
+if [ -z "$testOutput" ]; then
+    echo "Successfully passed test case"
+    exit 0
+else
+    echo "$testOutput"
+    exit 1
+fi
