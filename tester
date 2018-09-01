@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-testOutput="$(diff out <(./prog < in))"
+testOutput="$(diff out <(./prog.out < in))"
 if [ -z "$testOutput" ]; then
     echo "Successfully passed test case"
     exit 0
